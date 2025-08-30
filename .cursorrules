@@ -1,0 +1,103 @@
+# Cursor rules
+
+# Instructions
+
+- Record fixes for mistakes or corrections to avoid repetition in the `Lessons` section.
+- Organize thoughts and plan steps before starting a task in the `Scratchpad` section.
+- Clear old tasks if necessary.
+- Use todo markers for progress tracking:
+  - `[X]` Completed tasks
+  - `[ ]` Pending tasks
+- Update Scratchpad after completing subtasks.
+- Reflect and plan after milestones for better task management.
+- Always refer to Scratchpad before planning the next step.
+
+## Lessons
+
+## Scratchpad
+
+### Amazon-like Ecommerce Website Development Plan
+
+### Phase 1: Project Setup & Foundation
+- [X] Initialize Next.js 15 project with TypeScript
+- [X] Install and configure dependencies (Shadcn/ui, Tailwind CSS, Lucide, Zustand, Zod)
+- [X] Set up Tailwind CSS and custom styling
+- [X] Configure ESLint and Prettier
+- [X] Set up project structure and folder organization
+- [X] Install and configure Lucide React icons
+- [X] Set up Zustand for state management
+- [X] Configure Zod for schema validation
+
+#### Phase 2: Database & Authentication
+- [ ] Set up PostgreSQL database
+- [ ] Install and configure Prisma ORM
+- [ ] Design database schema (users, products, categories, orders, etc.)
+- [ ] Set up next-auth@beta for authentication
+- [ ] Create user roles (admin, customer, seller)
+- [ ] Implement authentication middleware
+- [ ] Set up protected routes
+
+#### Phase 3: Core Ecommerce Features
+- [ ] Create product catalog with categories
+- [ ] Implement product search and filtering
+- [ ] Build shopping cart functionality
+- [ ] Create product detail pages
+- [ ] Implement wishlist functionality
+- [ ] Add product reviews and ratings
+- [ ] Create checkout process
+- [ ] Integrate Stripe for payments
+- [ ] Implement order management
+
+#### Phase 4: Admin Dashboard
+- [ ] Create admin layout and navigation
+- [ ] Build dashboard overview with Recharts
+- [ ] Implement product management (CRUD)
+- [ ] Create order management interface
+- [ ] Build user management system
+- [ ] Add inventory management
+- [ ] Create sales analytics dashboard
+- [ ] Implement category management
+- [ ] Add bulk operations (import/export)
+
+#### Phase 5: Advanced Features
+- [ ] Set up Uploadthing for file uploads
+- [ ] Implement image optimization
+- [ ] Add email notifications with Resend
+- [ ] Create email templates
+- [ ] Implement order tracking
+- [ ] Add seller dashboard (if multi-vendor)
+- [ ] Create recommendation system
+- [ ] Implement advanced search with filters
+
+#### Phase 6: User Experience & Performance
+- [ ] Implement responsive design
+- [ ] Add loading states and skeletons
+- [ ] Implement error boundaries
+- [ ] Add toast notifications
+- [ ] Optimize images and assets
+- [ ] Implement caching strategies
+- [ ] Add SEO optimization
+- [ ] Create mobile app-like experience
+
+#### Phase 7: Testing & Deployment
+- [ ] Write unit tests for components
+- [ ] Add integration tests
+- [ ] Implement E2E testing
+- [ ] Set up CI/CD pipeline
+- [ ] Configure production environment
+- [ ] Set up monitoring and analytics
+- [ ] Implement security best practices
+- [ ] Performance optimization
+
+#### Phase 8: Additional Features
+- [ ] Multi-language support
+- [ ] Dark/light theme toggle
+- [ ] Advanced filtering and sorting
+- [ ] Social media integration
+- [ ] Affiliate program
+- [ ] Gift cards and coupons
+- [ ] Live chat support
+- [ ] Advanced reporting
+
+### Current Focus: Phase 2 - Database & Authentication
+Phase 1 completed! Ready to set up PostgreSQL database and authentication system.
