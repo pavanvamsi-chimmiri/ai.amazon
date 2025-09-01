@@ -9,8 +9,8 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url      = "file:./dev.db"
 }
 
 // User model with roles
@@ -44,12 +44,12 @@ model Account {
   type              String
   provider          String
   providerAccountId String
-  refresh_token     String? @db.Text
-  access_token      String? @db.Text
+  refresh_token     String?
+  access_token      String?
   expires_at        Int?
   token_type        String?
   scope             String?
-  id_token          String? @db.Text
+  id_token          String?
   session_state     String?
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -99,10 +99,10 @@ model Category {
 model Product {
   id          String   @id @default(cuid())
   name        String
-  description String   @db.Text
-  price       Decimal  @db.Decimal(10, 2)
-  comparePrice Decimal? @db.Decimal(10, 2)
-  images      String[] // Array of image URLs
+  description String
+  price       Float
+  comparePrice Float?
+  images      String   // JSON string of image URLs
   sku         String   @unique
   barcode     String?
   weight      Float?
@@ -131,11 +131,11 @@ model Order {
   orderNumber   String        @unique
   userId        String
   status        OrderStatus   @default(PENDING)
-  total         Decimal       @db.Decimal(10, 2)
-  subtotal      Decimal       @db.Decimal(10, 2)
-  tax           Decimal       @db.Decimal(10, 2) @default(0)
-  shipping      Decimal       @db.Decimal(10, 2) @default(0)
-  discount      Decimal       @db.Decimal(10, 2) @default(0)
+  total         Float
+  subtotal      Float
+  tax           Float         @default(0)
+  shipping      Float         @default(0)
+  discount      Float         @default(0)
   paymentStatus PaymentStatus @default(PENDING)
   paymentMethod String?
   shippingAddressId String?
@@ -158,8 +158,8 @@ model OrderItem {
   orderId   String
   productId String
   quantity  Int
-  price     Decimal @db.Decimal(10, 2)
-  total     Decimal @db.Decimal(10, 2)
+  price     Float
+  total     Float
   createdAt DateTime @default(now())
 
   // Relations
@@ -234,7 +234,7 @@ model Review {
   productId String
   rating    Int      // 1-5 stars
   title     String?
-  comment   String?  @db.Text
+  comment   String?
   isVerified Boolean @default(false)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

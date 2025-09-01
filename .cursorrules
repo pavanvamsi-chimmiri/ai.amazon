@@ -29,14 +29,14 @@
 - [X] Configure Zod for schema validation
 
 #### Phase 2: Database & Authentication
-- [X] Set up PostgreSQL database
+- [X] Set up SQLite database (fallback from PostgreSQL)
 - [X] Install and configure Prisma ORM
 - [X] Design database schema (users, products, categories, orders, etc.)
 - [X] Seed sample data (categories, products, users)
-- [ ] Set up next-auth@beta for authentication
-- [ ] Create user roles (admin, customer, seller)
-- [ ] Implement authentication middleware
-- [ ] Set up protected routes
+- [X] Set up next-auth@beta for authentication
+- [X] Create user roles (admin, customer, seller)
+- [X] Implement authentication middleware
+- [X] Set up protected routes
 
 #### Phase 3: Core Ecommerce Features
 - [ ] Create product catalog with categories
